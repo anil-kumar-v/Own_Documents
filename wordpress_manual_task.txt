@@ -1,0 +1,31 @@
+wordpress setup
+-----------------
+* After the Apache page(test) came.
+* You must have to check the connection between wordpress-Ec2 to RDS by using Telnet
+* For that Install the telnet 
+* Just Install the Mysql, to check whether we are able to connecting the RDS or not
+* If the connection is good, Go Ahead or else cross check the connections
+* Then make a directory, clone the wordpress code in that directory from the SCM
+* Then install the php-7.3 by using the " amazon-linux-extras install php7.3 "
+* Then stop&&start the Apache
+* Now check the UI, will you able to get the wordpress UI or not
+  If not came,
+ 	      * just remove the php and install it again and re-start the apache
+              * Still it won't came, just download the tar.gz file of wordpress from the wordpress official site by using the 
+		wget <link>
+	      * And Extract it
+		tar -xvzf <file>
+* After Extracting , Again stop && start the Apache
+* It may works,
+               After the wordpress UI came
+* Actually wordpress, will default looks for "wp-config.php" file to connect the wordpress
+	* For that purpose,we have to rename the "wp-sample-config.php" as "wp-config.php" and we have to make the empty of the file by using the command 
+             echo '' > wp-config.php
+        * After making the file empty, just check the content with "cat/more/less/vi/vim/nano"command.
+* Then copy the content from the wordpress UI 
+* And paste the copied content, in the "wp-config.php" file
+* Then click on the "Run the Installation"
+* After installed, connect to the database with the correct credentials , Make sure that you have to provide the correct credentials
+* After connecting to the database, Make sure you have to remember the credentials, if needed just keep it secure location
+* Then Login to the wordpress....
+   your wordpress is ready to host your application.......
