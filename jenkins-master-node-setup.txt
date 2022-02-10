@@ -1,0 +1,37 @@
+Creating Node process
+------------------------------------
+===>  we have to copy the jenkins private key in the credentials with target user, to make the connection successful, i.e., when we are launching the node machine,we may give the public key(own key). it will cross-check with the private key in the credentials.
+
+1.create ec2 (node/slave)==> Add the jenkins pub key to .ssh/authorized_keys of node(target user) 
+2.install pre-requ
+--- git
+---- java
+dont install java by yum install java
+follow these steps:-
+
+amazon-linux-extras install epel -y
+amazon-linux-extras install java-openjdk11 -y
+yum install epel-release -y 
+yum install java-11-openjdk-devel -y
+
+3.create credintials using (ssh username and key)
+----go to manage jenkins----go to global crentials 
+----create new credentials by giving ec2/node private key in credentials
+
+4.create node 
+---name
+---- executors
+----Remote root directory(give correct home directory)
+-----set label name
+-----Launch method(select login via SSH)
+-----Hostkey(give ec2/node private IP)
+-----Credentials (select already created Credentials)
+-------Host Key Verification Strategy(select last one)
+Non verifying Verification Strategy
+
+------finally save 
+ Refresh the Status of nodes
+
+Now.....your NODE will be active/online
+=============================================
+If not , Just go for the re-launch the agent in the Node Machine. And follow according to the error

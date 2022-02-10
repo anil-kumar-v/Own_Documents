@@ -1,0 +1,113 @@
+pre-requisites:
+==> Java
+
+# Install JAVA
+  sudo amazon-linux-extras install epel -y
+  sudo amazon-linux-extras install java-openjdk11 -y
+
+===> whenever we are installing, any third-party softwares , we have to install on "/opt(prefer) or /usr"
+  
+# To install the Tomcat, we have two ways -------yum install
+                                        -------Download zip and extract(prefer)
+# Go to Apache official website, go to Downloads, look for your customized version(64-bit.zip-windows&linux) and copy the link address
+# Download the zip/tar package 
+  #!/bin/bash 
+  cd /opt/
+  sudo wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.58/bin/apache-tomcat-9.0.58-windows-x64.zip
+
+# Extract zip 
+  sudo unzip apache-tomcat-9.0.58-windows-x64.zip
+
+# Delete the zip 
+  sudo rm -f apache-tomcat-9.0.58-windows-x64.zip
+# Rename the file
+  sudo mv apache-tomcat tomcat
+# Give the permission
+  sudo chmod -R 755 /opt/tomcat/
+# start the Tomcat
+  sudo sh /opt/tomcat/bin/startup.sh
+================================================================================
+
+# To print the specified columns
+  sudo awk '{print $column.no}' <filename>
+==========================================================
+# To count the number of lines, use “wc” with “l” as
+  wc -l <filename>
+
+# To count the number of words, use “wc” with “w” option as
+ wc -w <filename>
+
+# To count the total number of characters, use “wc” with “c” as
+ wc -m <filename>  or wc -c <filename>
+
+# 
+  wc <filename> 
+  1065     5343     40559        file1.txt
+ (lines)  (words)  (characters) (filename)
+=================================================================
+# To count no of files
+  grep -c "filter" <filename>
+
+# To display the files
+  grep -r "filter" <filename>
+
+# To count  in a specified file
+  grep -c "filter" <filename>| wc -l (lines)
+  grep -c "filter" <filename>| wc -w (words)
+  grep -c "filter" <filename>| wc -c (characters)
+
+# To display  in a specified file
+  grep -r "filter" <filename>| wc -l (lines)
+  grep -r "filter" <filename>| wc -w (words)
+  grep -r "filter" <filename>| wc -c (characters)
+
+
+# Enabling the systemctl to Tomcat
+----------------------------------------
+    1)  touch /etc/systemd/system/tomcat.service
+    2)  chmod 664 /etc/systemd/system/tomcat.service
+    3)  vim /etc/systemd/system/tomcat.service
+   * copy this content
+     [Unit]
+Description=Apache Tomcat Web Application Container
+After=syslog.target network.target
+
+[Service]
+Type=forking
+
+Environment=JAVA_HOME=/usr/lib/jvm/jre
+Environment=CATALINA_PID=/opt/tomcat/temp/tomcat.pid
+Environment=CATALINA_HOME=/opt/tomcat
+Environment=CATALINA_BASE=/opt/tomcat
+Environment='CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC'
+Environment='JAVA_OPTS=-Djava.awt.headless=true -Djava.security.egd=file:/dev/./urandom'
+
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/bin/kill -15 $MAINPID
+
+[Install]
+WantedBy=multi-user.target
+    4)  chmod 664 /etc/systemd/system/tomcat.service
+    5)  systemctl daemon-reload
+    6)  systemctl start tomcat.service
+    7)  systemctl status tomcat.service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

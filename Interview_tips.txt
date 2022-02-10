@@ -1,0 +1,258 @@
+100 lines, two columns(ip address,absolute path)
+
+i want to get the command line arguments 
+
+2)file name checking with files automation --shell script
+*)container enivironment--pre prod
+runtime enivironment--tomcat-var file
+*)we only deploy images at first only 
+*)build--zetaco--html file--where all code lines will be there--for developers where after checking the build they use 
+*)
+
+python
+========
+*)What is dictionary ===key value pair dict[key]
+*)what is tuple ?
+*)tuple and array difference ?
+=======================
+
+
+application infrastructire side or infra ====?
+
+
+kubernetes
+=========
+*)Contributions your work to team ?
+1)once image gets will take image and deploy to env
+2)And gives env to testing team
+
+Docker
+======
+*)AWS Supports EKS, why do we need kubernetes ?
+multiple docker images to run we need kubernetes 
+
+*)kubernetes is a orchetatiio tool where master is supported by aws for aws EKS
+
+
+=========================
+
+YAML File:
+======
+Major types
+---------
+1)API VERSION----kubernetes version different types of objects ---replication version--objects defined
+2)object
+3)meta data soecification
+
+
+
+Test automation:--separate testing team
+------------------
+
+what kind of testing tools:==api gateways written in java language
+
+
+
+Jenkins---
+=====
+*)tool integrate with externsion tools using plugins
+*)SSH integration to servers,dockers
+
+How to deploy on kuberntes---appllication side 
+=====================
+
+after build image, in Yaml file we have the deployment strategy
+
+*)Diffrenec between maven and gradle ?
+
+maven----java
+gradle---other technologies
+
+*)What is nexus ?
+Before cloud we use nexus to store packages
+
+*)How good at aws ?
+*)Ansible ?--what are your contributions in  your team with playbook ?
+ansible---last 6 months one time job
+depending on scenario will write playbooks
+
+shell
+=====
+
+*)How good with shell ?
+
+
+What is the difference between Nohubb-----and ---?----
+
+What are your servers ---RHEL 
+
+what is the diiferrence between RHEL and RedHat ?
+
+what is the use of croning service---cron tab--automation
+
+I want to put my system in Desktop mode in RHEL ?-----service command is there
+
+later,I want to put my system in normal mode in RHEL ?
+
+
+
+How to put in VM ware for desktop mode ??----
+
+*)How good at github ?----operations
+*)How good at L2,L3 ?
+*)How you will setup the ingress in aws ??------using aws defualt one or yours
+
+*)difference between pod ip and cluster ip ?
+load balancer----cluster ip----pod ip--need to check
+
+
+*)what is the complicated script you wrote in your team?
+
+*)where we will use while and do while ?
+
+*)go to statement in shell scripting ?
+============================
+
+onprem to cloud 
+============
+1)in onpremdata base passwords in plain code but in cloud we use SSM Paramaters(encrytpion method)
+
+2)Never keep prod and lower environment in different accounts
+
+3)how much data base we have---and how you will move when DR happens
+
+========================
+
+
+what happens if upgradations comes what you will do ?
+*)we use custom ami where we will be changing evrymonth and we follow blue green deployment wiht ASG
+
+Docker and Kubernetes
+===================
+
+
+VM into Containerzation ----
+====================
+
+VMS are coming up by 5 mins so we converted to containers
+I have been just part of the team with docker and k8s 
+--base docker image 
+
+sample docker command--?
+--------------------------
+*)in docker we install new reyclic agent,--need to check for the project u use
+
+
+What are the security measures for building a docker image ?
+*)Never try with root user
+*)After building docker image we use a tool called some tool ===?
+
+*)I have docker file and created a image and i have five commands--add,run..... 
+during docker commands we can use if --need to check
+
+*)What are networking  in Docker?
+
+*)What are namespaces in k8s?
+
+*)what are labels
+
+*)application level security in k8s we use environment varibales
+
+*)what is demon set ?
+
+*)what are health checks in k8s ?
+
+*)what are custom operators in k8s ?---???
+
+*)I have 1000 tomcat instances in my super machine.is there simple way to check for open checks ? and also to get the process idand other information
+
+*)you get an alert that one of your partition server is 95% what will you do ?
+du -sn  | (command)---path consuming folder in server ---commands
+
+*)Have you worked with any databases ?
+on the admin side just cteate,backup,user,roles
+
+*)How good with SQL queries ?
+UPDATE,SELECT,WHERE...............
+
+Ansible
+======
+*)for managing the vm's
+
+*)What is inventory in anisible ?---(myserver information)
+
+*)how to create a role in ansible ? and how you use ?
+
+*)What is the role strucrute in ansible ?
+
+*)What will you put in template folder ?----we keep dynamic values/variables will be here 
+
+*)Where will you put actions in ansible ?
+
+*)I have new process and i want to set it up on 100 servers. will you list of servers. And setting up he process the i give you sample config file .that config file contains two parameters with hostname and port ---------?????
+
+*)Have you heard about template module --i.e commands
+
+*)Before running commands i want to setup environment variables...---here we can pass in shell commands
+
+*)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

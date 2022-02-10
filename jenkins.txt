@@ -1,0 +1,34 @@
+pre-requisites:
+---------------
+jenkins----Add Sg 
+           Installation
+	   switch root user
+           create a shell for jenkins( vi /etc/passwd--enable /bin/false to bash)
+           switch to jenkins user
+           check .ssh folder if exists look for id_rsa,id_rsa.pub files if not there,copy the id_rsa,id_rsa.pub 
+	   Add id_rsa.pub to SCM(settings>ssh and gpg keys>add key)
+           Go to particular repo, on settings>webhooks>add webhook>add https://jenkins url/github-webhook/
+           Go to jenkins,create a job
+           On Configure, on SCM, choose Git, give repo url, add branch(main)
+             	         on Build, choose Execute shell, on shell write your commands for your task 
+
+
+commands:-
+=============
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+amazon-linux-extras install epel -y
+amazon-linux-extras install java-openjdk11 -y
+yum install epel-release
+yum install java-11-openjdk-devel -y
+yum install jenkins -y -y
+service jenkins start
+chkconfig jenkins on
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+ff609380c5024fd18cd56e39e33100bb
+
+scp without host key
+-----------------------------
+scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
+                         
