@@ -1,0 +1,29 @@
+Replication of RDS across the regions
+=========================================
+pre-requisites
+---------------
+# Ec2- 2
+    sg----> 22-myip
+ one ec2 in source region
+ Another ec2 in destination region
+# RDS in source region
+# you can access the ec2 with two ways
+  1) publicIP
+  2) we will attach the Ec2 to Target Group and Access with Load balancer endpoint
+# You need subnet Group to create RDS
+# RDS security Group
+      sg---> 3306-Ec2-sg
+--------------------------------------------------------------
+* Firstly, we have to create the RDS in one(source) region
+* It will take some time to create, while creating "Remember the credentials-if needed store in secure place"
+* After the RDS is in AVAILABLE state, select the particular database
+* Then, Go to "Actions", choose "create a read replica"
+* It will ask the "Source RDS"--choose the rds
+* It will ask replica-rds name----provide the name
+* It will ask the region, choose the region where you want to create your replica
+* Then choose your subnet group,security group 
+* Same process, how you create the rds
+-----------------------------------------------
+check
+======
+# ssh to the first Ec2 , Insert any data into the Ec2 or database and connect to database,it will appear in the source database and replica database.  

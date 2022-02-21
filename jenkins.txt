@@ -21,7 +21,7 @@ amazon-linux-extras install epel -y
 amazon-linux-extras install java-openjdk11 -y
 yum install epel-release
 yum install java-11-openjdk-devel -y
-yum install jenkins -y -y
+yum install jenkins -y
 service jenkins start
 chkconfig jenkins on
 cat /var/lib/jenkins/secrets/initialAdminPassword
